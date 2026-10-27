@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Form Pencarian Mahasiswa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="container">
+        <section class="form-card">
+
+            <h1>Pencarian Data Mahasiswa</h1>
+
+            <p class="description">
+                Gunakan form berikut untuk mencari data mahasiswa
+                berdasarkan nama, NIM, angkatan, atau tanggal masuk.
+            </p>
+
+            <!--
+                Method GET digunakan karena form ini
+                digunakan untuk pencarian data.
+            -->
+            <form action="hasilpencarian.html"method="get">
+
+                <!-- Input Text -->
+                <div class="form-group">
+                    <label for="nama">
+                        Nama Mahasiswa
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nama"
+                        name="nama"
+                        placeholder="Masukkan nama mahasiswa">
+                </div>
+
+                <!-- Input Text -->
+                <div class="form-group">
+                    <label for="nim">
+                        NIM
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nim"
+                        name="nim"
+                        placeholder="Contoh: 20260001">
+                </div>
+
+                <!-- Input Number -->
+                <div class="form-group">
+                    <label for="angkatan">
+                        Tahun Angkatan
+                    </label>
+
+                    <input
+                        type="number"
+                        id="angkatan"
+                        name="angkatan"
+                        min="2020"
+                        max="2030"
+                        placeholder="2026">
+                </div>
+
+                <!-- Input Date -->
+                <div class="form-group">
+                    <label for="tanggal">
+                        Tanggal Masuk
+                    </label>
+
+                    <input
+                        type="date"
+                        id="tanggal"
+                        name="tanggal">
+                </div>
+
+                <!-- Button -->
+                <div class="button-group">
+                    <button
+                        type="submit"
+                        class="btn btn-primary">
+                        Cari Data
+                    </button>
+
+                    <button
+                        type="reset"
+                        class="btn btn-secondary">
+                        Reset
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-neutral">
+                        Bantuan
+                    </button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>

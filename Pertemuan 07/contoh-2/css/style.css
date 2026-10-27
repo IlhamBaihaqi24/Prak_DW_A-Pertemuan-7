@@ -1,0 +1,155 @@
+:root {
+    --primary: #235789;
+    --primary-dark: #173d61;
+    --background: #f5f7fa;
+    --surface: #ffffff;
+    --border: #d9dee5;
+    --text: #252b33;
+    --text-secondary: #68727f;
+    --radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 760px;
+    margin: 50px auto;
+}
+
+.registration-card {
+    background-color: var(--surface);
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.form-header {
+    margin-bottom: 30px;
+}
+
+.form-header h1 {
+    margin: 5px 0 10px;
+    font-size: 30px;
+}
+
+.form-header p {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+.label {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+/* FORM */
+.form-group {
+    margin-bottom: 22px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-size: 15px;
+    background-color: white;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid rgba(35, 87, 137, 0.25);
+    border-color: var(--primary);
+}
+
+small {
+    display: block;
+    margin-top: 6px;
+    color: var(--text-secondary);
+}
+
+/* BUTTON */
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 12px 22px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-reset {
+    background-color: #eeeeee;
+    color: var(--text);
+}
+
+.btn-secondary {
+    background-color: white;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px auto;
+    }
+
+    .registration-card {
+        padding: 24px;
+    }
+
+    .form-header h1 {
+        font-size: 25px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
